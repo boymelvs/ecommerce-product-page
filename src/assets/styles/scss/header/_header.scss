@@ -1,0 +1,31 @@
+@import "./burger";
+
+@import "./nav";
+
+@import "./logo";
+
+@import "./profile";
+
+header {
+   @include flexBox(row, center, space-between, 0);
+   width: 100%;
+   padding: 20px 0;
+
+   & .navigation {
+      @include flexBox(row, center, center, 15px);
+
+      @media (min-width: 768px) {
+         padding: 20px 0;
+         flex-direction: row-reverse;
+         gap: 50px;
+      }
+   }
+
+   & .cart-profile {
+      @include flexBox(row, center, center, 15px);
+
+      @media (min-width: 768px) {
+         gap: 30px;
+      }
+   }
+}

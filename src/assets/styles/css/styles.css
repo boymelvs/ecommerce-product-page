@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 400;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 0 20px;
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  position: relative;
+  padding: 1px;
+  background: transparent;
+  transition: all 300ms ease-in-out;
+  z-index: 99;
+}
+.hamburger .line {
+  width: 25px;
+  border: 2px solid hsl(219deg, 9%, 45%);
+  background: hsl(219deg, 9%, 45%);
+  transition: all 350ms ease-in-out;
+}
+.hamburger:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.line-top.active {
+  width: 22px;
+  transform: rotate(45deg);
+  transform-origin: left top;
+}
+
+.line-inner.active {
+  visibility: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.line-bottom.active {
+  width: 22px;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.overlay {
+  width: 100%;
+  background: hsla(0deg, 0%, 0%, 0.75);
+  transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (min-width: 768px) {
+  .overlay {
+    width: unset;
+    position: unset;
+    transform: translateX(0%);
+    transition: all 0ms;
+  }
+}
+.overlay #menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 5rem 0 0 2rem;
+  width: 60%;
+  min-height: 100vh;
+  background: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 768px) {
+  .overlay #menu {
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    min-height: unset;
+  }
+}
+.overlay #menu .menu-item {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .overlay #menu .menu-item {
+    font-size: 16px;
+    color: hsl(220deg, 14%, 75%);
+  }
+  .overlay #menu .menu-item:hover {
+    color: hsl(219deg, 9%, 45%);
+  }
+}
+.overlay #menu .menu-item::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid hsl(26deg, 100%, 55%);
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+@media (min-width: 768px) {
+  .overlay #menu .menu-item::before {
+    bottom: -45px;
+  }
+}
+.overlay #menu .menu-item:hover::before {
+  transform: scale(1, 1);
+  transform-origin: left;
+}
+.overlay #menu .menu-item.active::before, .overlay #menu .menu-item.active-link::before {
+  transform: scale(1, 1);
+  transform-origin: left;
+}
+
+.overlay.active {
+  transform: translateX(0%);
+}
+
+.logo-container {
+  width: 150px;
+}
+@media (min-width: 768px) {
+  .logo-container {
+    width: 170px;
+  }
+}
+.logo-container img {
+  width: 100%;
+}
+
+.imgContainer {
+  width: 40px;
+}
+@media (min-width: 768px) {
+  .imgContainer {
+    width: 50px;
+  }
+}
+.imgContainer img {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border: 3px solid transparent;
+}
+.imgContainer img:hover {
+  cursor: pointer;
+  border: 3px solid hsl(26deg, 100%, 55%);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  padding: 20px 0;
+}
+header .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  header .navigation {
+    padding: 20px 0;
+    flex-direction: row-reverse;
+    gap: 50px;
+  }
+}
+header .cart-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  header .cart-profile {
+    gap: 30px;
+  }
+}
+
+main {
+  width: 100%;
+  border-top: 1px solid hsl(220deg, 14%, 75%);
+}
+
+/*# sourceMappingURL=styles.css.map */

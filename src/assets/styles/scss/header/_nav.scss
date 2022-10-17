@@ -1,0 +1,78 @@
+.overlay {
+   width: 100%;
+   background: $overlay;
+   transform: translateX(-100%);
+   transition: all 300ms ease-in-out;
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   @media (min-width: 768px) {
+      width: unset;
+      position: unset;
+      transform: translateX(0%);
+      transition: all 0ms;
+   }
+
+   #menu {
+      @include flexBox(column, flex-start, flex-start, 20px);
+      padding: 5rem 0 0 2rem;
+      width: 60%;
+      min-height: 100vh;
+      background: $white;
+
+      @media (min-width: 768px) {
+         width: 100%;
+         padding: 0;
+         flex-direction: row;
+         min-height: unset;
+      }
+
+      & .menu-item {
+         font-size: 18px;
+         font-weight: $font-weight-700;
+         cursor: pointer;
+         position: relative;
+
+         @media (min-width: 768px) {
+            font-size: 16px;
+            color: $grayish-blue;
+
+            &:hover {
+               color: $dark-grayish-blue;
+            }
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            border-bottom: 3px solid $orange;
+            transform: scale(0, 1);
+            transform-origin: right;
+            transition: transform 300ms ease-in-out;
+
+            @media (min-width: 768px) {
+               bottom: -45px;
+            }
+         }
+
+         &:hover::before {
+            transform: scale(1, 1);
+            transform-origin: left;
+         }
+
+         &.active::before,
+         &.active-link::before {
+            transform: scale(1, 1);
+            transform-origin: left;
+         }
+      }
+   }
+}
+
+.overlay.active {
+   transform: translateX(0%);
+}

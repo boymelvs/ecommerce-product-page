@@ -1,0 +1,19 @@
+.imgContainer {
+   width: 40px;
+
+   @media (min-width: 768px) {
+      width: 50px;
+   }
+
+   & img {
+      border-radius: 50%;
+      width: 100%;
+      height: auto;
+      border: 3px solid transparent;
+
+      &:hover {
+         cursor: pointer;
+         border: 3px solid $orange;
+      }
+   }
+}
