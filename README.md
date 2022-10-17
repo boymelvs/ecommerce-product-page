@@ -1,4 +1,4 @@
-# Frontend Mentor - CROWDFUNDING PRODUCT PAGE SOLUTION
+# Frontend Mentor - E-COMMERCE PRODUCT PAGE SOLUTION
 
 ## Table of contents
 
@@ -15,33 +15,33 @@ Thanks for checking out this front-end coding challenge.
 
 ## Overview
 
-This is a solution to the [Crowdfunding product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/crowdfunding-product-page-7uvcZe7ZR).
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
 ### The challenge
 
 Users should be able to:
 
--  View the optimal layout depending on their device's screen size
--  See hover states for interactive elements
--  Make a selection of which pledge to make
--  See an updated progress bar and total money raised based on their pledge total after confirming a pledge
--  See the number of total backers increment by one after confirming a pledge
--  Toggle whether or not the product is bookmarked
+-  View the optimal layout for the site depending on their device's screen size
+-  See hover states for all interactive elements on the page
+-  Open a lightbox gallery by clicking on the large product image
+-  Switch the large product image by clicking on the small thumbnail images
+-  Add items to the cart
+-  View the cart and remove items from it
 
 ### Screenshot
 
-![Crowdfunding product page solution](./design/desktop-preview.jpg)
+![E-commerce product page solution](./design/desktop-preview.jpg)
 
 ### Links
 
--  Live Site URL: [Crowdfunding product page solution](https://boymelvs.github.io/crowdfunding-product-page-main)
+-  Live Site URL: [E-commerce product page solution]()
 
 ### Built with
 
--  HTML
 -  Flexbox
--  CSS
+-  Sass/CSS
 -  Javascripts
+-  ReactJs
 
 ## Author
 
