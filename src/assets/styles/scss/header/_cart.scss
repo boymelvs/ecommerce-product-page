@@ -1,0 +1,14 @@
+.cart-container {
+   width: 23px;
+
+   & img {
+      width: 100%;
+      height: auto;
+      fill: red;
+
+      &:hover {
+         cursor: pointer;
+         transform: scale(1.05);
+      }
+   }
+}

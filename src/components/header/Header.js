@@ -3,10 +3,13 @@ import Burger from "./Burger";
 import Cart from "./Cart";
 import Logo from "./Logo";
 import Nav from "./Nav";
+import CartItem from "./CartItem";
+import CartNotif from "./CartNotif";
 import Profile from "./Profile";
 
-const Header = () => {
+const Header = ({ state, dispatch }) => {
    const [navActive, setNavActive] = useState(false);
+   const [cartOpen, setCartOpen] = useState(false);
 
    return (
       <header className="header">
@@ -17,9 +20,12 @@ const Header = () => {
          </div>
 
          <div className="cart-profile">
-            <Cart />
+            <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
+            <CartNotif cartOpen={cartOpen} setCartOpen={setCartOpen} />
             <Profile />
          </div>
+
+         <CartItem cartOpen={cartOpen} />
       </header>
    );
 };

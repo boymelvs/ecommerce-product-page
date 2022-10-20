@@ -4,12 +4,22 @@
 
 @import "./logo";
 
+@import "./cart";
+
+@import "./cartItem";
+
+@import "./cartNotif";
+
 @import "./profile";
 
 header {
    @include flexBox(row, center, space-between, 0);
    width: 100%;
    padding: 20px 0;
+
+   @media (min-width: 992px) {
+      padding: 20px 30px;
+   }
 
    & .navigation {
       @include flexBox(row, center, center, 15px);
@@ -23,6 +33,7 @@ header {
 
    & .cart-profile {
       @include flexBox(row, center, center, 15px);
+      position: relative;
 
       @media (min-width: 768px) {
          gap: 30px;
