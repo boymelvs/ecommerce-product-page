@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartNotif = ({ cartOpen, setCartOpen }) => {
+const CartNotif = ({ cartOpen, setCartOpen, state }) => {
    const cartClick = () => {
       setCartOpen(!cartOpen);
    };

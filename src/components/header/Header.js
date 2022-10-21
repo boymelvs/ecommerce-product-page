@@ -21,11 +21,11 @@ const Header = ({ state, dispatch }) => {
 
          <div className="cart-profile">
             <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
-            <CartNotif cartOpen={cartOpen} setCartOpen={setCartOpen} />
+            <CartNotif cartOpen={cartOpen} setCartOpen={setCartOpen} state={state} />
             <Profile />
          </div>
 
-         <CartItem cartOpen={cartOpen} />
+         <CartItem cartOpen={cartOpen} state={state} dispatch={dispatch} />
       </header>
    );
 };

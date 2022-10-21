@@ -1,14 +1,22 @@
 .cart-container {
    width: 23px;
 
-   & img {
+   & svg path {
       width: 100%;
       height: auto;
-      fill: red;
+      fill: $dark-grayish-blue;
+   }
 
-      &:hover {
-         cursor: pointer;
-         transform: scale(1.05);
-      }
+   &:hover {
+      cursor: pointer;
+   }
+
+   &:hover svg path {
+      fill: $grayish-blue;
+      transform: scale(1.05);
+   }
+
+   &:active {
+      transform: scale(0.99);
    }
 }

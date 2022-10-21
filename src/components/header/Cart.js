@@ -1,5 +1,5 @@
 import React from "react";
-import cartImg from "../../assets/images/icon-cart.svg";
+import { CartIcon } from "../../svg/index";
 
 const Cart = ({ cartOpen, setCartOpen }) => {
    const cartClick = () => {
@@ -8,7 +8,7 @@ const Cart = ({ cartOpen, setCartOpen }) => {
 
    return (
       <div className="cart-container">
-         <img src={cartImg} alt="cart" onClick={cartClick} />
+         <CartIcon onClick={cartClick} />
       </div>
    );
 };

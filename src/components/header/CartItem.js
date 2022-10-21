@@ -1,8 +1,15 @@
 import React from "react";
 import itemPhoto from "../../assets/images/image-product-1-thumbnail.jpg";
-import deleteBtn from "../../assets/images/icon-delete.svg";
+import { Delete } from "../../svg/index";
 
-const CartItem = ({ cartOpen }) => {
+const CartItem = ({ cartOpen, state, dispatch }) => {
+   const removeItem = () => {
+      dispatch({
+         type: "REMOVE_FROM_CART",
+         payload: {},
+      });
+   };
+
    return (
       <div className={`cart-modal ${cartOpen && "active"}`}>
          <div className="cart-item-container">
@@ -24,10 +31,10 @@ const CartItem = ({ cartOpen }) => {
                            </div>
                         </div>
 
-                        <img src={deleteBtn} className="delete" alt="delete" />
+                        <Delete onClick={removeItem} />
                      </div>
 
-                     <button type="button" className="checkout">
+                     <button type="button" className="checkoutBtn">
                         Checkout
                      </button>
                   </>
