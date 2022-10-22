@@ -419,7 +419,7 @@ header .cart-profile {
   gap: 0;
   width: 100%;
 }
-@media (min-width: 576px) {
+@media (min-width: 500px) {
   .gallery {
     width: unset;
   }
@@ -433,9 +433,9 @@ header .cart-profile {
   width: 100%;
   position: relative;
 }
-@media (min-width: 576px) {
+@media (min-width: 500px) {
   .gallery .images-container {
-    width: 320px;
+    width: 350px;
   }
 }
 .gallery .images-container .product-image-large {
@@ -736,9 +736,9 @@ header .cart-profile {
   width: 100%;
   position: relative;
 }
-@media (min-width: 576px) {
+@media (min-width: 500px) {
   .modal-gallery .images-container {
-    width: 320px;
+    width: 350px;
   }
 }
 .modal-gallery .images-container .product-image-large {

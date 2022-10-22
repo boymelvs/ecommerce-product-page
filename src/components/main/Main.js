@@ -9,10 +9,6 @@ const Main = ({ state, dispatch }) => {
    const [idx, setIdx] = useState(0);
    const [openModal, setOpenModal] = useState(false);
 
-   const largeImgClick = () => {
-      setOpenModal(true);
-   };
-
    const smallImgClick = (index) => {
       setIdx(index);
    };
@@ -33,7 +29,7 @@ const Main = ({ state, dispatch }) => {
       <main>
          {openModal && <ModalGallery state={state} setOpenModal={setOpenModal} idx={idx} smallImgClick={smallImgClick} prevNextClick={prevNextClick} />}
 
-         <Gallery state={state} idx={idx} largeImgClick={largeImgClick} smallImgClick={smallImgClick} prevNextClick={prevNextClick} />
+         <Gallery state={state} idx={idx} setOpenModal={setOpenModal} smallImgClick={smallImgClick} prevNextClick={prevNextClick} />
          <Product state={state} dispatch={dispatch} />
       </main>
    );

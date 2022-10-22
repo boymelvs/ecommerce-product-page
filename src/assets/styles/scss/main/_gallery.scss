@@ -2,7 +2,7 @@
    @include flexBox(row, center, center, 0);
    width: 100%;
 
-   @media (min-width: 576px) {
+   @media (min-width: 500px) {
       width: unset;
    }
 
@@ -11,8 +11,8 @@
       width: 100%;
       position: relative;
 
-      @media (min-width: 576px) {
-         width: 320px;
+      @media (min-width: 500px) {
+         width: 350px;
       }
 
       & .product-image-large {
