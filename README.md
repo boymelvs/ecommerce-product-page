@@ -30,11 +30,11 @@ Users should be able to:
 
 ### Screenshot
 
-![E-commerce product page solution](./design/desktop-preview.jpg)
+![E-commerce product page solution](./src/assets/images/desktop-preview.jpg)
 
 ### Links
 
--  Live Site URL: [E-commerce product page solution]()
+-  Live Site URL: [E-commerce product page solution](https://product-page-gamma.vercel.app/)
 
 ### Built with
 
