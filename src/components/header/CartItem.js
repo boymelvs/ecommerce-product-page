@@ -33,7 +33,7 @@ const CartItem = ({ cartOpen, setCartOpen, state, dispatch }) => {
 
                                  <div className="item-price">
                                     <span className="price">${product.price} </span>x<span className="qty"> {cart.qty} = </span>
-                                    <span className="total">${Number(product.price) * cart.qty}</span>
+                                    <span className="total">${(Number(product.price) * cart.qty).toFixed(2)}</span>
                                  </div>
                               </div>
 

@@ -9,7 +9,6 @@ const Gallery = ({ state, idx, setOpenModal, smallImgClick, prevNextClick }) => 
 
    const largeImgClick = (elem) => {
       const observer = new IntersectionObserver((entry) => {
-         console.log(entry[0]);
          if (entry[0].boundingClientRect.width > 0 && entry[0].isIntersecting) {
             setOpenModal(true);
          }

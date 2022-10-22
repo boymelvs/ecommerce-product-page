@@ -267,6 +267,7 @@ body {
 }
 .cart-modal .cart-item-container .item-container .items .description .item-price .total {
   font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
 }
 .cart-modal .cart-item-container .item-container .items svg {
   width: 20px;
@@ -421,6 +422,7 @@ header .cart-profile {
 }
 @media (min-width: 500px) {
   .gallery {
+    padding: 10px;
     width: unset;
   }
 }
