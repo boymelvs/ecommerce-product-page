@@ -3,14 +3,11 @@ const CartReducer = (state, action) => {
       case "ADD_PRODUCTS":
          return { ...state, products: action.payload };
 
-      case "ADD_TO_CART":
-         return { ...state, cart: [{ ...action.payload }, ...state.cart] };
-
       case "REMOVE_FROM_CART":
-         return { ...state, cart: state.cart.filter((c) => c.id !== action.payload.id) };
+         return { ...state, cart: [] };
 
       case "CHANGE_CART_QTY":
-         return { ...state, cart: state.cart.filter((c) => (c.id === action.payload.id ? (c.qty = action.payload.qty) : c.qty)) };
+         return { ...state, cart: { qty: action.payload.qty, products: action.payload.products } };
 
       default:
          break;

@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import Burger from "./Burger";
-import Cart from "./Cart";
 import Logo from "./Logo";
 import Nav from "./Nav";
+import { CartIcon } from "../../svg";
 import CartItem from "./CartItem";
 import CartNotif from "./CartNotif";
 import Profile from "./Profile";
 
 const Header = ({ state, dispatch }) => {
+   const { cart } = state;
    const [navActive, setNavActive] = useState(false);
    const [cartOpen, setCartOpen] = useState(false);
+
+   const cartClick = () => {
+      setCartOpen(!cartOpen);
+   };
 
    return (
       <header className="header">
@@ -20,12 +25,15 @@ const Header = ({ state, dispatch }) => {
          </div>
 
          <div className="cart-profile">
-            <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
-            <CartNotif cartOpen={cartOpen} setCartOpen={setCartOpen} state={state} />
+            <div className="cart-container">
+               <CartIcon onClick={cartClick} />
+            </div>
+
+            {cart.qty > 0 && <CartNotif cartOpen={cartOpen} setCartOpen={setCartOpen} cart={cart} />}
             <Profile />
          </div>
 
-         <CartItem cartOpen={cartOpen} state={state} dispatch={dispatch} />
+         <CartItem cartOpen={cartOpen} setCartOpen={setCartOpen} state={state} dispatch={dispatch} />
       </header>
    );
 };

@@ -11,7 +11,7 @@
       width: unset;
       position: unset;
       transform: translateX(0%);
-      transition: all 0ms;
+      transition: all 0ms ease-in-out;
    }
 
    #menu {
@@ -30,7 +30,6 @@
 
       & .menu-item {
          font-size: 18px;
-         font-weight: $font-weight-700;
          cursor: pointer;
          position: relative;
 

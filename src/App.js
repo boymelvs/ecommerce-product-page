@@ -6,7 +6,7 @@ import Footer from "./components/footer/Footer";
 import { FetchData } from "./components/utils/FetchData";
 
 function App() {
-   const [state, dispatch] = useReducer(CartReducer, { products: FetchData(), cart: [] });
+   const [state, dispatch] = useReducer(CartReducer, { products: [], cart: [] });
 
    useEffect(() => {
       dispatch({ type: "ADD_PRODUCTS", payload: FetchData() });

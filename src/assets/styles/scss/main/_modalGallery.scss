@@ -1,9 +1,31 @@
-.gallery {
+.modal-gallery {
    @include flexBox(row, center, center, 0);
+   position: absolute;
+   top: 0;
+   left: 0;
    width: 100%;
+   height: 100%;
+   background: $overlay;
+   z-index: 10;
 
-   @media (min-width: 576px) {
-      width: unset;
+   & .close {
+      @include flexBox(row, center, center, 0);
+      top: -30px;
+      position: absolute;
+      right: 0;
+
+      & path {
+         fill: $white;
+      }
+
+      &:hover {
+         cursor: pointer;
+         transform: scale(1.1);
+      }
+
+      &:active {
+         transform: scale(0.99);
+      }
    }
 
    & .images-container {
@@ -59,6 +81,7 @@
                border-radius: 10px;
                background: $small-photo-overlay;
                border: 2px solid $orange;
+               opacity: 0.8;
                cursor: pointer;
             }
 
@@ -66,6 +89,7 @@
                border-radius: 10px;
                background: $small-photo-overlay;
                border: 2px solid $orange;
+               opacity: 0.8;
                cursor: pointer;
             }
 
@@ -84,10 +108,7 @@
          background: $white;
          padding: 10px;
          position: absolute;
-
-         @media (min-width: 768px) {
-            display: none;
-         }
+         top: 30%;
 
          &:hover {
             cursor: pointer;
@@ -109,12 +130,12 @@
       }
 
       & #prev {
-         left: 15px;
+         left: -15px;
       }
 
       & #next {
          padding-left: 12px;
-         right: 15px;
+         right: -15px;
       }
    }
 }

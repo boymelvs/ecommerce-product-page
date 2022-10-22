@@ -1,20 +1,25 @@
 import React from "react";
-import { Next, Previous } from "../../svg/index";
+import { Next, Previous, Close } from "../../svg/index";
 
-const Gallery = ({ state, idx, largeImgClick, smallImgClick, prevNextClick }) => {
+const ModalGallery = ({ state, setOpenModal, idx, smallImgClick, prevNextClick }) => {
    const { products } = state;
    const imgLarges = products.length > 0 ? products[0].imgLarges : "";
    const imgSmalls = products.length > 0 ? products[0].imgSmall : [];
 
+   const closeModal = (e) => {
+      if (e.target.id === "modal" || e.target.id === "close") setOpenModal(false);
+   };
+
    return (
-      <div className="gallery">
+      <div className="modal-gallery" id="modal" onClick={(e) => closeModal(e)}>
          <div className="images-container">
-            <img src={imgLarges[idx]} className="product-image-large" alt="" onClick={largeImgClick} />
+            <Close className="close" id="close" onClick={(e) => closeModal(e)} />
+            <img src={imgLarges[idx]} className="product-image-large" alt="" />
 
             <div className="thumbnail-gallery">
                {imgSmalls.map((imgSmall, index) => {
                   return (
-                     <div className={`product-image-small ${idx === index && "active"}`} key={index} onClick={() => smallImgClick(index)}>
+                     <div className={`product-image-small ${index === idx && "active"}`} key={index} onClick={() => smallImgClick(index)}>
                         <img src={imgSmall} alt="" />
                      </div>
                   );
@@ -29,4 +34,4 @@ const Gallery = ({ state, idx, largeImgClick, smallImgClick, prevNextClick }) =>
    );
 };
 
-export default Gallery;
+export default ModalGallery;

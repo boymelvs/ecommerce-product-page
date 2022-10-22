@@ -14,11 +14,15 @@ body {
    color: $black;
    font-weight: $font-weight-400;
    font-family: $font-fam-kumbh-sans;
+   background: $grayish-blue;
 }
 
 .container {
    max-width: 1440px;
    min-width: 320px;
+   margin: 0 auto;
+   background: $white;
+   min-height: 100vh;
 
    @media (min-width: 768px) {
       padding: 0 20px;
