@@ -24,13 +24,13 @@ const Gallery = ({ state, idx, setOpenModal, smallImgClick, prevNextClick }) => 
    return (
       <div className="gallery">
          <div className="images-container">
-            <img src={imgLarges[idx]} className="product-image-large" alt="" onClick={() => largeImgClick(thumbnailElem.current)} />
+            <img src={imgLarges[idx]} className="product-image-large" alt="Product" onClick={() => largeImgClick(thumbnailElem.current)} />
 
             <div className="thumbnail-gallery" ref={thumbnailElem}>
                {imgSmalls.map((imgSmall, index) => {
                   return (
                      <div className={`product-image-small ${idx === index && "active"}`} key={index} onClick={() => smallImgClick(index)}>
-                        <img src={imgSmall} alt="" />
+                        <img src={imgSmall} alt="Product" />
                      </div>
                   );
                })}

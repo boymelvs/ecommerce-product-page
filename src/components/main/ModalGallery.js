@@ -14,13 +14,13 @@ const ModalGallery = ({ state, setOpenModal, idx, smallImgClick, prevNextClick }
       <div className="modal-gallery" id="modal" onClick={(e) => closeModal(e)}>
          <div className="images-container">
             <Close className="close" id="close" onClick={(e) => closeModal(e)} />
-            <img src={imgLarges[idx]} className="product-image-large" alt="" />
+            <img src={imgLarges[idx]} className="product-image-large" alt="Product" />
 
             <div className="thumbnail-gallery">
                {imgSmalls.map((imgSmall, index) => {
                   return (
                      <div className={`product-image-small ${index === idx && "active"}`} key={index} onClick={() => smallImgClick(index)}>
-                        <img src={imgSmall} alt="" />
+                        <img src={imgSmall} alt="Product" />
                      </div>
                   );
                })}
